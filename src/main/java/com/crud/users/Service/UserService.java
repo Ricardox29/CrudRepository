@@ -19,8 +19,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(Integer userId) {
-        return userRepository.findById(userId);
+    public User getUserById(Integer userId) {
+        return userRepository.findById(userId).orElseThrow(() -> new RuntimeException(("Cant find user with id " + userId)));
     }
 
     public User saveUser(User user) {

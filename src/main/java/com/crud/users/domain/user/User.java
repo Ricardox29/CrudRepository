@@ -40,5 +40,6 @@ public class User {
     private String password;
 
     @Column(name = "role", nullable = false, length = 10)
-    private Role role;
+    private String role;
+
 }
